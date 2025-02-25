@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Deals</title>
+
+    <style>
+        body {
+            background-color: violet;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .deal-box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .deal-box:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="deal-box" onclick="confirmPurchase('Daily 100MB', '5Ksh')">
+        <h2>Daily 100MB<br>@5/=</h2>
+    </div>
+
+    <div class="deal-box" onclick="confirmPurchase('Daily 300MB', '10Ksh')">
+        <h2>Daily 500MB<br>@10/=</h2>
+    </div>
+
+    <div class="deal-box" onclick="confirmPurchase('Daily 2GB', '25Ksh')">
+        <h2>Daily unlimited<br>@25/=</h2>
+    </div>
+
+    <div class="deal-box" onclick="confirmPurchase('Weekly 2GB', '50Ksh')">
+        <h2>Weekly 5GB<br>@100/=</h2>
+    </div>
+
+    <div class="deal-box" onclick="confirmPurchase('Weekly Unlimited', '300Ksh')">
+        <h2>Weekly Unlimited<br>@250/=</h2>
+    </div>
+
+    <div class="deal-box" onclick="confirmPurchase('Monthly Unlimited', '1000Ksh')">
+        <h2>Monthly Unlimited<br>@800/=</h2>
+    </div>
+
+    <div class="deal-box" onclick="confirmPurchase('One Hour Unlimited', '5Ksh')">
+        <h2>One Hour Unlimited<br>@5/=</h2>
+    </div>
+
+    <script>
+        function confirmPurchase(plan, price) {
+            const confirmation = confirm(`You are about to purchase ${plan} for ${price}.
+Do you want to proceed?`);
+            if (confirmation) {
+                window.location.href = `payment-page.html?deal=${encodeURIComponent(plan)}&price=${encodeURIComponent(price)}`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
