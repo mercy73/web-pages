@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="Home.css">
+    <title>GOVERNMENT WIFI</title>
+</head>
+<body bgcolor="violet">
+    
+    <h1>HOME PAGE</h1>
+
+              
+<div id="registration">
+    <button id="registerButton">Register</button>
+</div>
+
+<div id="registrationForm" style="display: none;"  >
+    <h2>Registration Form</h2>
+    <form action="regwifi.php" method="POST">
+
+        <label for="Username">Username:</label>
+        <input class="group" type="text" name="username" id="username" required><br><br/>
+        
+     
+
+        
+        <label for="phone number">Phone Number:</label>
+        <input class="group" type="text" name="phonenumber" id="phonenumber" required><br><br>
+
+        <label for="password">Password:</label>
+        <input class="group" type="password" name="password" id="password" required><br><br>
+ 
+
+        <button id="submit">Submit</button>
+    </form>
+    
+</div>
+
+<script language="javascript">
+    
+document.getElementById("registerButton").addEventListener("click", function() {
+document.getElementById("registration").style.display = "none";
+document.getElementById("registrationForm").style.display = "block";
+});
+
+// You can add code to handle form submission here.
+</script>
+<div id="login" >
+<button id="loginButton">Login</button>
+</div>
+
+<div id="loginForm" style="display: none;" >
+<h2>Login Form</h2>
+<form action="regwifi.php" method="get">
+    <label for="username">Username:</label>
+    <input class="group" type="text" name="username2" id="username" required><br><br>
+
+    <label for="password">Password:</label>
+    <input class="group" type="password" name="password2" id="password" required><br><br>
+
+    <button id="submit">Login</button>
+</form>
+</div>
+
+<script language="javascript">
+document.getElementById("loginButton").addEventListener("click", function() {
+document.getElementById("login").style.display = "none";
+document.getElementById("loginForm").style.display = "block";
+if(username="")alert("Field cannot be empty");
+else if (!username==a-zA-Z) {
+alert ("Enter Alphabetical letters")
+
+} else {
+alert ("Username successfully set")
+}
+});
+
+// You can add code to handle the login form submission here. 
+
+</script>
+
+<div id="howtoregister">
+<button id="howtoregisterButton">How to register</button>
+</div>
+
+<div id="howtoregisterForm" style="display: none;" class="howtoregister">
+<h2><font color="blue"> How To register Steps</font></h2>
+<p><h3> To register for government WiFi, please provide the following details:</h3></p>
+<ul>
+    <li><h3> username</h3></li>
+    <li><h3> Phone Number</h3></li>
+    <li><h3> Password</h3></li>
+</ul>
+<p><h3>Then submit</h3></p>
+<p><h3>If already have an account,go to login and provide the username and password<br>
+used during registrtion</h3></p>
+</div>
+
+<script>
+document.getElementById("howtoregisterButton").addEventListener("click", function() {
+document.getElementById("howtoregister").style.display = "none";
+document.getElementById("howtoregisterForm").style.display = "block";
+});
+</script>
+
+ 
+</body>
+</html>
